@@ -8,7 +8,7 @@ fetch('assets/data/random-links.json')
 	})
 
 // I'm so sorry for including these words but I'd rather they be here than on the live website!
-let filteredWords = ['sex', 'porn', 'nude', 'naked', 'babe', 'girl', 'virgin', 'gay', 'penis', 'vagina', 'dick', 'cock', 'pussy', 'fuck', 'shit', 'baby', 'anal', 'model', 'woman', 'women', 'cum', 'bondage', 'blowjob'];
+let filteredWords = ['sex', 'porn', 'nude', 'naked', 'babe', 'girl', 'virgin', 'gay', 'penis', 'vagina', 'dick', 'cock', 'pussy', 'fuck', 'shit', 'baby', 'anal', 'model', 'woman', 'women', 'cum', 'bondage', 'blowjob', 'horny', 'bust', 'nut'];
 function createRandomLinks() {
 	let keys = Object.keys(randomLinks);
 	let temp = '';
@@ -47,6 +47,24 @@ function introAnimate() {
 		return
 	}
 	introBackgroundOverlay.style.opacity = 1-percentScrolled;
+}
+
+// Make links interactive
+function showLinks() {
+	const introBackgroundOverlay = document.querySelector('.intro-background-overlay');
+	introBackgroundOverlay.dataset.active = 0;
+	const introBackground = document.querySelector('.intro-background');
+	introBackground.dataset.active = 1;
+	const introBackgroundClose = document.querySelector('.intro-background-close');
+	introBackgroundClose.dataset.active = 1;
+}
+function hideLinks() {
+	const introBackgroundOverlay = document.querySelector('.intro-background-overlay');
+	introBackgroundOverlay.dataset.active = 1;
+	const introBackground = document.querySelector('.intro-background');
+	introBackground.dataset.active = 0;
+	const introBackgroundClose = document.querySelector('.intro-background-close');
+	introBackgroundClose.dataset.active = 0;
 }
 
 // Flying GIFs
@@ -96,6 +114,10 @@ async function playMIDI(file) {
 		synth.disconnect();
 	}
 	audio.pause();
+	const audioPlayer = document.querySelector('.audio-player');
+	const audioPlayerName = audioPlayer.querySelector('.audio-player-name');
+	audioPlayerName.innerText = file;
+	audioPlayer.dataset.active = 1;
 
 	const midi = await Midi.fromUrl("assets/audio/"+file);
 	const now = Tone.now() + 0.5;
@@ -135,6 +157,19 @@ function playAudio(file) {
 	audio.pause();
 	audio = new Audio('assets/audio/'+file);
 	audio.play();
+	const audioPlayer = document.querySelector('.audio-player');
+	const audioPlayerName = audioPlayer.querySelector('.audio-player-name');
+	audioPlayerName.innerText = file;
+	audioPlayer.dataset.active = 1;
+}
+function stopAudio() {
+	while (synths.length) {
+		const synth = synths.shift();
+		synth.disconnect();
+	}
+	audio.pause();
+	const audioPlayer = document.querySelector('.audio-player');
+	audioPlayer.dataset.active = 0;
 }
 
 // Generate audio viz
@@ -181,4 +216,14 @@ function createAudioViz() {
 	audioChart.innerHTML += temp;
 	const audioChartCredits = document.querySelector('.audio-chart-credits');
 	audioChartCredits.innerHTML += creditsTemp;
-} 
+}
+
+// Baby scrolling example
+const babyContainer = document.querySelector('.baby-container');
+const baby = babyContainer.querySelector('.baby-content');
+const babyTotal = babyContainer.querySelector('.baby-total');
+const babyPercent = babyContainer.querySelector('.baby-percent');
+babyContainer.addEventListener('wheel', (e) => {
+	babyTotal.innerText = Math.floor(e.offsetX/640);
+	babyPercent.innerText = ((e.offsetX/(1702521*640))*100).toFixed(4);
+})

@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>GeoCities</title>
+	<title>GeoCities: Paradise Lost</title>
 	<link rel="icon" type="png" href="assets/graphics/favicon.png">
 	<link rel="stylesheet" href="style.css">
 
@@ -13,6 +13,16 @@
 	<script type="text/javascript" src="https://unpkg.com/@tonejs/midi"></script>
 </head>
 <body>
+	<div class="audio-player" data-active="0">
+		<div class="audio-player-playing">
+			<div class="audio-player-title">NOW PLAYING</div>
+			<div class="audio-player-name">filename</div>
+		</div>
+		<div class="audio-player-close" onclick="stopAudio();">X</div>
+	</div>
+
+	<div class="intro-background-close" data-active="0" onclick="hideLinks()">X</div>
+
 	<div class="gif-container">
 		<img src="" class="gif">
 	</div>
@@ -275,6 +285,26 @@
 			</p>
 			
 			<img src="assets/charts/dimensions-cluster.svg" class="chart" style="max-width: 800px; margin: 80px auto;">
+
+			<p>
+				Let’s try something visualizing this a different way. Even though we know how many images we’re working with — 121,384,234 — it’s not easy to comprehend what that number means.
+			</p>
+			<p>
+				Here’s a question: how much space do these images take up? Not in terms of file size, but in terms of visual space?
+			</p>
+			<p>
+				We can visualize this by looking at most popular image dimension of 640x480 pixels (ignoring 1x1 pixels again) and putting the total 1,702,521 images in a row.
+			</p>
+			<p>
+				It takes up a lot of space. Don’t take my word for it — try scrolling the dancing babies to see just how many images we’re talking about here.
+			</p>
+
+			<div class="baby-container">
+				<div class="baby-counter">You’ve scrolled past <span class="baby-total">0</span> / 1,702,521 babies [<span class="baby-percent">0.0000</span>%]</div>
+				<div class="baby-content">
+					<div class="baby"></div>
+				</div>
+			</div>
 		</section>
 
 		<div class="chapter-divider"></div>
@@ -288,6 +318,9 @@
 			<p>
 				A chapter about links, coming soon!
 			</p>
+			<div onclick="showLinks()" class="chapter-btn">
+				Click here to browse some random links from GeoCities websites!
+			</div>
 		</section>
 
 		<div class="chapter-divider"></div>
