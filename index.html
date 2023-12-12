@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>GeoCities</title>
+	<link rel="icon" type="png" href="assets/graphics/favicon.png">
+	<link rel="stylesheet" href="style.css">
+
+	<!-- Tone.js -->
+	<script type="text/javascript" src="https://unpkg.com/tone@latest/build/Tone.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/@tonejs/ui@0.0.8/build/tonejs-ui.js"></script>
+	<script type="text/javascript" src="https://unpkg.com/@tonejs/midi"></script>
+</head>
+<body>
+	<div class="gif-container">
+		<img src="" class="gif">
+	</div>
+	
+	<header class="intro">
+		<div class="intro-slide">
+			<p>
+				As a kid, I was warned by my parents that what I posted online would be permanent.
+			</p>
+		</div>
+		<div class="intro-slide">
+			<p>
+				Is that true?
+			</p>
+		</div>
+		<div class="intro-slide">
+			<p>
+				What would happen if the website you posted on didn’t exist anymore?
+			</p>
+		</div>
+		<div class="intro-background-overlay"></div>
+		<div class="intro-background"></div>
+	</header>
+
+	<main class="content">
+
+		<h1 class="title">
+			<span class="title-main">GeoCities</span>
+			<span class="title-subtitle">Paradise Lost</span>
+		</h1>
+		<p class="title-desc">
+			<span></span>
+			A look at what gets lost as the Internet grows up.<br><br>
+			by Gabriel Drozdov
+			<span></span>
+		</p>
+
+		<div class="nav-container">
+			<nav class="nav">
+				<div class="nav-header">
+					Table of Contents
+				</div>
+				<a href="#chapter1">Chapter 1: Goodbye</a>
+				<a href="#chapter2">Chapter 2: How to reanimate a digital corpse</a>
+				<a href="#chapter3">Chapter 3: Echoes of the past</a>
+				<a href="#chapter4">Chapter 4: Another dimension</a>
+				<a href="#chapter5">Chapter 5: Drawing links, making connections</a>
+				<a href="#chapter6">Chapter 6: Home not sweet home</a>
+			</nav>
+		</div>
+
+		<section class="chapter" id="chapter1">
+			<h2>
+				<span class="chapter-number">Chapter 1</span>
+				<span class="chapter-title">Goodbye</span>
+			</h2>
+			<p>
+				<a href="https://en.wikipedia.org/wiki/GeoCities" target="_blank">GeoCities</a> was one of the earliest web platforms that allowed anyone and everyone to create their own website. Keyword: “was.” In 2009, the then-Yahoo-owned platform officially shut down in all countries except for Japan. (<a href="https://wiki.archiveteam.org/index.php/GeoCities_Japan" target="_blank">Japan’s service</a> wouldn’t shut down until a decade later in 2019.) And by “shut down,” I mean that all URLs originally leading to GeoCities domains began to rediret to the Yahoo.com homepage, like <a href="http://www.geocities.com/mariodore_1999/pafx3.htm" target="_blank">this one</a>. To that effect, GeoCities became inaccessible, and in a way ceased to exist.
+			</p>
+			<figure class="chapter-img">
+				<img src="assets/graphics/geocities-home-2005_07_28.jpg">
+				<figcaption>The GeoCities homepage on July 28, 2005. Source: <a href="https://web.archive.org/web/20050728061556/http://geocities.com/" target="_blank">Internet Archive</a></figcaption>
+			</figure>
+			<p>
+				There’s something funny about a website dying, though. Who’s to say that Yahoo isn’t storing the GeoCities database somewhere dark, cold, and out of reach? What even is that database, really?
+			</p>
+			<p>
+				If we consider what a website is actually made of, we can boil it down to a few types of data. There’s HTML code, which organizes information like text and images. There’s CSS code, which makes that information look pretty. And then there’s JavaScript code, which in the era of GeoCities was not widespread but today offers various forms of interactivity. Theoretically, if we could get access a GeoCities site’s code as well as any other media assets, we could bring the site back to life.
+			</p>
+			<figure class="chapter-img">
+				<img src="assets/graphics/website-files.jpg">
+				<figcaption>The files used to create the website you’re currently reading.</figcaption>
+			</figure>
+			<p>
+				The death of GeoCities was sudden, but it was announced. And in the few months between the announcement and the official closure, a dedicated group of internet archivists appropriately called the <a href="https://wiki.archiveteam.org/" target="_blank">Archive Team</a> began a process of preserving as much of the platform as they could. Using <a href="https://en.wikipedia.org/wiki/Web_crawler" target="_blank">web crawlers</a>, which are programs that automatically scour the web and collect data as they go, the Archive Team saved a portion of GeoCities — almost exactly 1TB, or 1000GB, of HTML, CSS, and JavaScript code, alongside audio files, images, and more. And then, <a href="https://thepiratebay.org/description.php?id=5923737">they released it to the public</a>.
+			</p>
+			<p>
+				Anyone, including you, can download this data. Why don’t we try to bring the site back to life?
+			</p>
+		</section>
+
+		<div class="chapter-divider"></div>
+
+		<section class="chapter" id="chapter2">
+			<h2>
+				<span class="chapter-number">Chapter 2</span>
+				<span class="chapter-title">How to reanimate a digital corpse</span>
+			</h2>
+			<p>
+				Plot twist: I couldn’t download the data.
+			</p>
+			<p>
+				Or at least, I couldn’t download the Archive Team’s data. One terabyte of information is an enormous package to get all at once even by today’s standards. Furthermore, if we’re going to invest some time and energy into this resurrection, we had better think about what our goals are.
+			</p>
+			<p>
+				First, let’s think about what not to do. In this journey, we actually don’t have any interest in reviving dead GeoCities sites. It’s not that this isn’t a valuable endeavor, it’s that others have done this job already (and probably better than we could). There’s <a href="https://restorativland.org/" target="_blank">restorativland</a>, whose expressed mission is “to excavate shut down, abandoned web ruins and restore them to surfable, visually accessible, searchable, remixable condition.” Sure enough, their <a href="https://geocities.restorativland.org/" target="_blank">GeoCities Gallery</a> offers us a portal into the past. And then there’s the <a href="https://archive.org/" target="_blank">Internet Archive</a>, whose reach into the history of the internet is vast and unconditional. Take an old GeoCities domain, like <a href="https://web.archive.org/web/20091027004008/http://geocities.com/perkinshome/" target="_blank">this one</a>, and see it semi-live on their <a href="https://web.archive.org/" target="_blank">Wayback Machine</a>.
+			</p>
+			<figure class="chapter-img">
+				<img src="assets/graphics/perkins-family.jpg">
+				<figcaption>A GeoCities site for a Christian family resource. Source: <a href="https://web.archive.org/web/20091027004008/http://geocities.com/perkinshome/" target="_blank">Internet Archive</a></figcaption>
+			</figure>
+			<p>
+				Instead, our real goal is to get a glimpse of what life was like on an Internet that no longer exists. And for that, the corpse we need to reanimate isn’t a single website — it’s the entirety of GeoCities as a cohesive community.
+			</p>
+			<p>
+				When we need to move to a big picture perspective, our focus shifts to data rather than design. Any <a href="https://geocities.restorativland.org/CapeCanaveral/Galaxy/1017/" target="_blank">random GeoCities site</a> can give us a sense of one person’s digital portrait, but a spreadsheet can tell us what a whole group of individuals were up to across multiple sites. What images were they using? What audio files were they listening to? What URLs did they link to?
+			</p>
+			<p>
+				This is where the aforementioned Internet Archive comes to our rescue. Instead of looking at the GeoCities data as one lump sum, the Internet Archive (specifically Nick Ruest) offers us another way in through a <a href="https://archive.org/details/geocities-webarchive-collection-derivatives" target="_blank">series of palatable CSV files</a>, each dedicated to one aspect of yet another GeoCities data dump. At only tens of gigabytes — not hundreds (at least while compressed) — these files offer glimpses into the lives of former GeoCitizens.
+			</p>
+			<figure class="chapter-img">
+				<img src="assets/graphics/csv.jpg">
+				<figcaption>Contents of geocities-plain-text.csv. Source: <a href="https://archive.org/details/geocities-webarchive-collection-derivatives" target="_blank">Internet Archive</a></figcaption>
+			</figure>
+			<p>
+				It’s these files I was able to download and make some sense of. Using the <a href="https://www.r-project.org/about.html" target="_blank">programming language R</a>, we can programmatically parse through the data and scour for details that show some signs of life.
+			</p>
+			<p>
+				While I can’t give you the data (for the same reason I couldn’t download the heaping mass that was the Archive Team’s torrent), what I can give you is <a href="#TODO" target="_blank">the code</a> and the process I took to get my results.
+			</p>
+			<p>
+				What follows from hereon in are explorations that turn these datasets into visualizations. And with a mix of objectivity and subjectivity, these graphic experiments will hopefully give you a sense of what was lost as the Internet grew up while sites like GeoCities went down forever.
+			</p>
+		</section>
+
+		<div class="chapter-divider"></div>
+
+		<section class="chapter" id="chapter3">
+			<h2>
+				<span class="chapter-number">Chapter 3</span>
+				<span class="chapter-title">Echoes of the past</span>
+			</h2>
+
+			<p>
+				What’s your favorite song?
+			</p>
+			<p>
+				Actually, what’s your favorite song that came out before 2009?
+			</p>
+			<p>
+				Actually, I don’t need to ask you. I have a spreadsheet called geocities-audio-information.csv that’ll tell me everything I need to know. We can open this spreadsheet, find the top results, kick back, and listen to our favorite oldies.
+			</p>
+			<p>
+				One problem, though — GeoCities is from the era of <a href="https://en.wikipedia.org/wiki/MIDI" target="_blank">MIDI files</a> as the most popular audio file format. Unfortunately for us, MIDI files don’t actually contain sound. Instead, they contain the notes for another sound application to play. And while MIDI files are still used extensively in commerical music production, they are almost nonexistent in contemporary web design.
+			</p>
+			<p>
+				Luckily for us, we can leverage the power of modern JavaScript libraries to make some of these old tunes ring again! In the chart below, you’ll find the top fifty audio filenames, which for our purposes we’re extrapolating to mean the top fifty most popular files. This isn’t 100% true, but is good enough to get a picture of what GeoCitizens were vibing to. (In the case of generic names like “music.mid”, I’ve chosen a track at random.)
+			</p>
+			<p>
+				Click on a row to hear its audio file! MIDI files play live using a generic synth generated by the <a href="https://tonejs.github.io/Midi/" target="_blank">Tone.js</a> JavaScript library.
+			</p>
+
+			<h3 class="chart-title">Top 50 most commonly used audio filenames</h3>
+			<h4 class="chart-axis">Total occurrences</h4>
+			<h4 class="chart-axis">*<em>indicates randomly selected file</em></h4>
+			<div class="audio-chart">
+				<div class="audio-chart-axis">
+					<div class="audio-chart-axis-text">0</div>
+					<div class="audio-chart-axis-line"></div>
+				</div>
+				<div class="audio-chart-axis" style="left: 12.5%">
+					<div class="audio-chart-axis-text">250</div>
+					<div class="audio-chart-axis-line"></div>
+				</div>
+				<div class="audio-chart-axis" style="left: 25%">
+					<div class="audio-chart-axis-text">500</div>
+					<div class="audio-chart-axis-line"></div>
+				</div>
+				<div class="audio-chart-axis" style="left: 37.5%">
+					<div class="audio-chart-axis-text">750</div>
+					<div class="audio-chart-axis-line"></div>
+				</div>
+				<div class="audio-chart-axis" style="left: 50%">
+					<div class="audio-chart-axis-text">1000</div>
+					<div class="audio-chart-axis-line"></div>
+				</div>
+				<div class="audio-chart-axis" style="left: 62.5%">
+					<div class="audio-chart-axis-text">1250</div>
+					<div class="audio-chart-axis-line"></div>
+				</div>
+				<div class="audio-chart-axis" style="left: 75%">
+					<div class="audio-chart-axis-text">1500</div>
+					<div class="audio-chart-axis-line"></div>
+				</div>
+				<div class="audio-chart-axis" style="left: 87.5%">
+					<div class="audio-chart-axis-text">1750</div>
+					<div class="audio-chart-axis-line"></div>
+				</div>
+				<div class="audio-chart-axis" style="left: 100%">
+					<div class="audio-chart-axis-text">2000</div>
+					<div class="audio-chart-axis-line"></div>
+				</div>
+			</div>
+			<div class="audio-chart-credits">
+				<h4>Sources:</h4>
+			</div>
+			<!-- OLD CHART -->
+			<!-- <img src="assets/charts/music.svg" class="chart"> -->
+		</section>
+
+		<div class="chapter-divider"></div>
+
+		<section class="chapter" id="chapter4">
+			<h2>
+				<span class="chapter-number">Chapter 4</span>
+				<span class="chapter-title">Another dimension</span>
+			</h2>
+
+			<p>
+				The old internet’s aesthetic is often associated with a specific file type — the humble animated GIF. These GIFs have inspired countless nostalgic revivals, from the maximalist <a href="https://www.cameronsworld.net/" target="_blank">Cameron’s World</a>, to the minimalist <a href="http://textfiles.com/underconstruction/" target="_blank">Under Construction</a> collection.
+			</p>
+			<p>
+				Sure enough, looking at geocities-image-information.csv reveals that there’s truth to this obsession. Almost half of the images in the spreadsheet fall into the GIF category, which is remarkable given the sheer lack of GIFs used in contemporary web design. (I don’t have a source for that last statement, so you’ll just have to trust me as a web designer. Can you imagine the Apple homepage <a href="https://web.archive.org/web/20040208165841/http://www.apple.com:80/" target="_blank">looking like this</a>?)
+			</p>
+			
+			<h3 class="chart-title">Most commonly used image file types</h3>
+			<div class="jpg-or-gif">
+				<img src="assets/charts/jpg-or-gif.svg" class="chart" style="max-width: 800px; margin: 80px auto;">
+				<img src="assets/graphics/jpg-example.jpg" class="jpg-or-gif-jpg">
+				<img src="assets/graphics/gif-example.gif" class="jpg-or-gif-gif">
+			</div>
+
+			<p>
+				Now a question: how did we get those results?
+			</p>
+			<p>
+				The geocities-image-information.csv spreadsheet is large enough to warrant a new analytical approach. Sitting uncompressed at a more-than-modest 24.66GB, it isn't really feasible to load in the spreadsheet in its entirety to R. Instead, we need to split it into multiple files of manageable sizes, in this case around ten million lines and 2GB large each.
+			</p>
+			<p>
+				Counting up the total number of rows across these new .csv files gives us the total number of images represented: 121,384,234. Compared to the meager 1,648,073 rows of geocities-audio-information.csv, this is a gargantuan amount of data. Working with big data like this, it becomes increasingly difficult to pull out the minutae. So if we want to learn what the Internet was like prior to 2009, how can we get a sense of that through these images?
+			</p>
+			<p>
+				One approach is to look for patterns across wide observations. In the image information dataset, there are columns for the width and height of images represented. What kinds of patterns might plotting the most used dimensions reveal?
+			</p>
+			
+			<h3 class="chart-title">Most commonly used image dimensions*</h3>
+			<h4 class="chart-subtitle">*with at least 1000 occurences, filtering out images greater than 1000px in width or height</h4>
+			<img src="assets/charts/dimensions.svg" class="chart" style="max-width: 800px; margin: 80px auto;">
+
+			<p>
+				Egads, I see patterns! But first, yes, there are quite a few stipulations to that chart title. The data filters out any images greater than 1000 pixels on either of their dimensions because these images are by-and-large outliers. Additionally, it would be impossible to plot the entirety of the dataset as millions of points would be needed, so this is an adequate sampling for our purposes.
+			</p>
+			<p>
+				Furthermore, I've left out the actual answer to the most popular image dimensions: 1x1 pixel. At a whopping 21,673,149 occurences, this would’ve eclipsed the rest of the data and rendered the chart incoherent. Plus, these tiny images had an entirely different purpose to the images we might think of. Instead, they were cleverly used to <a href="https://www.adlucent.com/resources/blog/the-history-and-evolution-of-pixel-tracking-in-digital-marketing/" target="_blank">track users visiting a site</a>.
+			</p>
+			<p>
+				All this said, the chart reveals a series of extremely satisfying patterns. First, we have strong horizontal and vertical lines tracking commonly-used round numbers. Sometimes these line up with the axes, like with 500px, but often these stray into even number territory, particularly around multiples of four. We can see this most clearly by observating the spacing between these trends, which is consistent and even.
+			</p>
+			
+			<img src="assets/charts/dimensions-horizontal-vertical.svg" class="chart" style="max-width: 800px; margin: 80px auto;">
+
+			<p>
+				The second pattern reveals vertical lines extending out from the origin. These indicate standard aspect ratios, in particular the 4:3 ratio as seen in the top two results of 320x240 and 640x480. These ratios are also indicative of a time when 4:3 was much more common than the widescreen 16:9 we’re used to today.
+			</p>
+			
+			<img src="assets/charts/dimensions-diagonal.svg" class="chart" style="max-width: 800px; margin: 80px auto;">
+
+			<p>
+				The third pattern reveals one of the core limits of the Internet in the GeoCities era: bandwidth. A vast majority of file sizes cluster at the origin of the chart, indicating small dimensions. (These are much smaller than any image you would expect to see today. For instance, most images you see on this site are at least 1000px wide or tall.) With slower Internet speeds and lower-resolution displays, images could not (and had no reason) to be any bigger than they needed to be.
+			</p>
+			
+			<img src="assets/charts/dimensions-cluster.svg" class="chart" style="max-width: 800px; margin: 80px auto;">
+		</section>
+
+		<div class="chapter-divider"></div>
+
+		<section class="chapter" id="chapter5">
+			<h2>
+				<span class="chapter-number">Chapter 5</span>
+				<span class="chapter-title">Drawing links, making connections</span>
+			</h2>
+
+			<p>
+				A chapter about links, coming soon!
+			</p>
+		</section>
+
+		<div class="chapter-divider"></div>
+
+		<section class="chapter" id="chapter6">
+			<h2>
+				<span class="chapter-number">Chapter 6</span>
+				<span class="chapter-title">Home sweet not home</span>
+			</h2>
+
+			<p>
+				A conclusion, coming soon!
+			</p>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<p>This project was created by <a href="https://www.gabrieldrozdov.com/" target="_blank">Gabriel Drozdov</a> for RISD’s Data Narratives course taught by <a href="https://www.reubenfb.com/" target="_blank">Reuben Fischer-Baum</a>.</p>
+		<br>
+		<p>GIFs from <a href="https://gifcities.org/" target="_blank">GifCities</a>.</p>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+</html>

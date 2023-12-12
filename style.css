@@ -1,0 +1,484 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+	scroll-margin: 20px;;
+}
+body {
+	font-family: "Arial", sans-serif;
+}
+img {
+	display: block;
+	width: 100%;
+}
+
+/* Intro */
+.intro {
+	position: relative;
+	background-color: blue;
+	display: grid;
+	grid-auto-rows: 100dvh;
+	padding: 20px;
+}
+.intro-slide {
+	position: relative;
+	z-index: 9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.intro-slide p {
+	padding: 1em 40px .9em 40px;
+	background-color: yellow;
+	color: black;
+	font-size: 18px;
+	box-shadow: 5px 5px 0 black;
+	font-weight: bold;
+	text-wrap: pretty;
+	font-family: "Times New Roman", serif;
+}
+.intro-background-overlay {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100dvh;
+	opacity: 1;
+	background-color: blue;
+}
+.intro-background {
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	flex-wrap: wrap;
+	white-space: nowrap;
+	gap: 1px;
+	width: 100vw;
+	height: 100dvh;
+	overflow: hidden;
+}
+.intro-background a {
+	font-weight: bold;
+	flex-grow: 1;
+	text-decoration: none;
+	color: blue;
+	background-color: white;
+	font-size: 10px;
+	min-width: 10vw;
+	padding: 0 40px;
+	flex-shrink: 0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2px;
+	animation-name: intro-background-link;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-duration: 1s;
+}
+.intro-background a:hover {
+	animation: unset;
+}
+.intro-background a:active {
+	opacity: .5;
+}
+@keyframes intro-background-link {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Content */
+.content {
+	background-color: yellow;
+	z-index: 9;
+	position: relative;
+	padding-bottom: 200px;
+}
+.title {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+.title-main {
+	font-size: 21vw;
+	text-align: center;
+	color: blue;
+	text-shadow: 10px 10px white;
+	line-height: 1em;
+}
+.title-subtitle {
+	line-height: 1em;
+	text-transform: uppercase;
+	font-size: 4vw;
+	text-align: center;
+	letter-spacing: 1em;
+	padding-left: .8em;
+	color: blue;
+	font-family: "Times New Roman", serif;
+}
+.title-desc {
+	font-size: 48px;
+	text-align: center;
+	padding: 200px 40px;
+	font-style: italic;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	gap: 1.5em;
+	line-height: 1.1em;
+}
+.title-desc span {
+	width: 200px;
+	flex: 0 0 auto;
+	height: 20px;
+	background-color: black;
+}
+
+/* Chapters */
+.chapter {
+	margin: 0 auto;
+	padding: 0 40px 0 400px;
+}
+.chapter h2 {
+	color: blue;
+	margin-bottom: 80px;
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	gap: 30px;
+}
+.chapter-number {
+	text-transform: uppercase;
+	font-size: 18px;
+	line-height: 1em;
+	background-color: blue;
+	padding: .5em 20px .45em 20px;
+	color: yellow;
+	box-shadow: 5px 5px white;
+}
+.chapter-title {
+	font-size: 100px;
+	text-shadow: 5px 5px white;
+	line-height: 1em;
+}
+.chapter p {
+	margin-top: 20px;
+	line-height: 1.4em;
+	font-size: 32px;
+	text-wrap: pretty;
+	font-family: "Times New Roman", serif;
+}
+.chapter p a {
+	color: blue;
+	font-weight: bold;
+	font-family: "Arial", sans-serif;
+}
+.chapter p a:hover {
+	text-decoration: none;
+}
+.chapter p a:active {
+	color: black;
+}
+.chapter-divider {
+	height: 20px;
+	background-color: black;
+	margin: 200px 0;
+}
+.chapter-img {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	background-color: white;
+	border: 10px solid blue;
+	max-width: 640px;
+	margin: 40px auto;
+}
+.chapter-img img {
+	border-bottom: 10px solid blue;
+}
+.chapter-img figcaption {
+	font-weight: bold;
+	background-color: blue;
+	color: white;
+	width: 100%;
+	font-size: 14px;
+}
+.chapter-img figcaption a {
+	color: yellow;
+}
+.chapter-img figcaption a:hover {
+	text-decoration: none;
+}
+.chapter-img figcaption a:active {
+	color: white;
+}
+.chart-title {
+	color: blue;
+	text-align: center;
+	font-size: 48px;
+	line-height: 1em;
+	margin: 80px 0 40px 0;
+}
+.chart-subtitle {
+	font-size: 24px;
+	text-align: center;
+	margin-top: 10px;
+	line-height: 1em;
+}
+.chart-axis {
+	text-align: center;
+	font-size: 24px;
+	line-height: 1.2em;
+}
+.margin-bottom {
+	margin-bottom: 80px;
+}
+
+/* Nav */
+.nav-container {
+	height: 0;
+	position: sticky;
+	top: 20px;
+}
+.nav {
+	display: flex;
+	flex-direction: column;
+	background-color: white;
+	width: 320px;
+	margin-left: 20px;
+	box-shadow: 10px 10px black;
+	gap: 20px;
+	padding-bottom: 20px;
+}
+.nav-header {
+	background-color: blue;
+	line-height: 1em;
+	color: yellow;
+	font-weight: bold;
+	font-size: 18px;
+	padding: .5em 20px .45em 20px;
+	text-transform: uppercase;
+}
+.nav a {
+	font-family: "Arial", sans-serif;
+	font-weight: bold;
+	font-size: 24px;
+	color: blue;
+	padding: 0 20px;
+	line-height: 1.2em;
+}
+.nav a:hover {
+	text-decoration: none;
+}
+.nav a:active {
+	color: black;
+}
+
+/* Flying gifs */
+.gif-container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100dvh;
+	overflow: hidden;
+	pointer-events: none;
+	z-index: 999;
+}
+.gif {
+	position: absolute;
+	transition: 10s;
+	height: auto;
+	width: 200px;
+}
+
+/* Audio files */
+.audio-chart {
+	padding-top: 40px;
+	display: grid;
+	grid-auto-rows: 40px;
+	gap: 5px;
+	position: relative;
+	margin: 40px 80px 0 0;
+}
+.audio-chart-row {
+	display: flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+.audio-chart-row:hover .audio-chart-bar {
+	background-color: white;
+}
+.audio-chart-row:hover .audio-chart-label {
+	color: blue;
+	text-shadow: 2px 2px yellow;
+}
+.audio-chart-row:hover .audio-chart-label span {
+	display: inline;
+}
+.audio-chart-row:active .audio-chart-bar {
+	background-color: black;
+}
+.audio-chart-row:active .audio-chart-label {
+	color: white;
+	text-shadow: 2px 2px blue;
+}
+.audio-chart-label {
+	position: relative;
+	z-index: 9;
+	color: white;
+	text-shadow: 2px 2px black;
+	font-size: 24px;
+	font-weight: bold;
+	padding-left: 10px;
+}
+.audio-chart-label span {
+	display: none;
+}
+.audio-chart-bar {
+	background-color: blue;
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+}
+.audio-chart-axis {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	pointer-events: none;
+}
+.audio-chart-axis-text {
+	font-weight: bold;
+	font-size: 18px;
+	position: sticky;
+	top: 20px;
+	margin-left: 10px;
+	line-height: 1em;
+	z-index: 10;
+	background-color: yellow;
+}
+.audio-chart-axis-line {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: black;
+	width: 2px;
+	height: 100%;
+	z-index: 8;
+}
+.audio-chart-credits {
+	display: flex;
+	flex-wrap: wrap;
+	height: auto;
+	font-size: 12px;
+	margin-top: 40px;
+	column-gap: .5em;
+}
+.audio-chart-credits a {
+	color: blue;
+	font-weight: bold;
+}
+.audio-chart-credits a:hover {
+	color: white;
+}
+.audio-chart-credits a:active {
+	color: black;
+}
+@media only screen and (max-width: 800px) {
+	.audio-chart-axis-text {
+		font-size: 10px;
+	}
+}
+
+/* JPG or GIF */
+.jpg-or-gif {
+	position: relative;
+}
+.jpg-or-gif-jpg {
+	position: absolute;
+	top: 80%;
+	left: calc(50% - 300px);
+	transform: translateY(-50%);
+	width: 200px;
+}
+.jpg-or-gif-gif {
+	position: absolute;
+	top: 80%;
+	right: calc(50% - 300px);
+	transform: translateY(-50%);
+	width: 200px;
+}
+@media only screen and (max-width: 800px) {
+	.jpg-or-gif-jpg {
+		width: 120px;
+		left: calc(50% - 200px);
+	}
+	.jpg-or-gif-gif {
+		width: 120px;
+		right: calc(50% - 200px);
+	}
+}
+
+/* Footer */
+.footer {
+	position: relative;
+	z-index: 9;
+	padding: 120px 20px;
+	text-align: center;
+	background-color: black;
+	color: white;
+	font-family: "Times New Roman", serif;
+	font-size: 18px;
+}
+.footer a {
+	color: yellow;
+}
+.footer a:hover {
+	text-decoration: none;
+}
+.footer a:active {
+	color: white;
+}
+
+/* Mobile */
+@media only screen and (max-width: 1000px) {
+	.nav {
+		display: none;
+	}
+	.chapter {
+		margin: 0 auto;
+		padding: 0 40px;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.title-desc {
+		font-size: 32px;
+		padding: 200px 20px;
+	}
+	.nav {
+		display: none;
+	}
+	.chapter {
+		padding: 0 20px;
+	}
+	.chapter-title {
+		font-size: 64px;
+	}
+	.chapter p {
+		font-size: 24px;
+	}
+}
