@@ -177,7 +177,7 @@
 
 			<h3 class="chart-title">Top 50 most commonly used audio filenames</h3>
 			<h4 class="chart-axis">Total occurrences</h4>
-			<h4 class="chart-axis">*<em>indicates randomly selected file</em></h4>
+			<h4 class="chart-axis">*<em>indicates randomly selected file</em><br>✝<em>indicates file is not playable at this time</em></h4>
 			<div class="audio-chart">
 				<div class="audio-chart-axis">
 					<div class="audio-chart-axis-text">0</div>
@@ -316,7 +316,34 @@
 			</h2>
 
 			<p>
-				A chapter about links, coming soon!
+				We can boil down our previous explorations to a few fields of inquiry. First, we looked at culture through the lens of audio content. Then, we looked at technology through the lens of image formats and dimensions. But what about community? How can we get a sense of how GeoCitizens interacted with the Internet, and with each other?
+			</p>
+			<p>
+				One dataset of interest here is geocities-webgraph.csv. At 213.58GB, we’re looking at an inaccessible amount of information that tracks a few things relating to hyperlinks: 1) the webpage a hyperlink is on; 2) where that hyperlink leads; and, 3) what text displayed inside of that hyperlink.
+			</p>
+			<p>
+				To look at this data, I had to split it up into 135 separate CSV files of ten million lines each and programmatically work my way down the line.
+			</p>
+			<p>
+				This method worked! After just over two hours, I emerged with three discoveries.
+			</p>
+			<p>
+				First, the full 213.58GB dataset represented 1,345,729,749 rows in total of data.
+			</p>
+			<p>
+				Second, of those 1.3 billion rows, there were approximately 53,478,277 unique sites represented with hyperlinks on them. This number is almost exact give-or-take 135, in the case that some domains were split across CSV files.
+			</p>
+			<p>
+				And third, I created a new spreadsheet tracking the most commonly used combos for destination URL and display text. Out of that list, here are the top fifty target URLs.
+			</p>
+			
+			<img src="assets/charts/links.svg" class="chart" style="margin: 80px auto;">
+
+			<p>
+				It’s astonishing that this data looks almost like a plateau. In fact, there are several ties at the same values, but most the actual values are extremely close but slightly different. I’m not 100% sure why this is the case, so a follow-up inquiry is needed (and potentially another two hour loop through the datasets to search for particular domains).
+			</p>
+			<p>
+				But perhaps the best way to appreciate the lost connections on GeoCities is to see them firsthand. What I’ve done is take the first of the 135 CSV files and grab a random set of 10,000 rows. After filtering out as much inappropriate content as possible, I’ve pulled in a random subset of those 10,000 links and made them available for you to try clicking. Press the following button to see the links (which will take you to the Internet Archive, since almost all relevant sites have gone down). Click at your own risk!
 			</p>
 			<div onclick="showLinks()" class="chapter-btn">
 				Click here to browse some random links from GeoCities websites!
@@ -332,7 +359,16 @@
 			</h2>
 
 			<p>
-				A conclusion, coming soon!
+				There’s a sad truth that emerges from this journey — GeoCities is gone. What we’re left with is something like a transcript, or a script without actors. Even as we breathe some life back into the site’s data, we can’t revive the community that once created it.
+			</p>
+			<p>
+				Obviously the Internet has changed a significant amount since 2009. That’s such a broad statement it almost doesn’t have meaning, but we can think about the changes since GeoCities’ demise as a sort of consolidation of user experiences, interfaces, and types of communities. Today, social media functionality is much more regimented and standardized, and very few places remain that empower such a large population to basically do whatever they want.
+			</p>
+			<p>
+				Is there still a place for something like GeoCities in our world? Or would a site like GeoCities require us to go back in time, to rethink the ways we’ve decided to the use the Internet and instead said it was better back then?
+			</p>
+			<p>
+				In the meantime, we at least have our data experiments to remember the site by.
 			</p>
 		</section>
 	</main>

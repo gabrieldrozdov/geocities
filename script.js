@@ -8,7 +8,7 @@ fetch('assets/data/random-links.json')
 	})
 
 // I'm so sorry for including these words but I'd rather they be here than on the live website!
-let filteredWords = ['sex', 'porn', 'nude', 'naked', 'babe', 'girl', 'virgin', 'gay', 'penis', 'vagina', 'dick', 'cock', 'pussy', 'fuck', 'shit', 'baby', 'anal', 'model', 'woman', 'women', 'cum', 'bondage', 'blowjob', 'horny', 'bust', 'nut'];
+let filteredWords = ['sex', 'porn', 'nude', 'naked', 'babe', 'girl', 'virgin', 'gay', 'penis', 'vagina', 'dick', 'cock', 'pussy', 'fuck', 'shit', 'baby', 'anal', 'model', 'woman', 'women', 'cum', 'bondage', 'blowjob', 'horny', 'bust', 'nut', "masturbate"];
 function createRandomLinks() {
 	let keys = Object.keys(randomLinks);
 	let temp = '';
@@ -36,9 +36,9 @@ function createRandomLinks() {
 
 // Scroll event
 let percentScrolled = 0;
-window.addEventListener('wheel', (e) => {
+window.addEventListener('scroll', (e) => {
 	const intro = document.querySelector('.intro');
-	percentScrolled = e.pageY / intro.offsetHeight;
+	percentScrolled = window.scrollY / intro.offsetHeight;
 	requestAnimationFrame(introAnimate);
 })
 function introAnimate() {
@@ -191,12 +191,25 @@ function createAudioViz() {
 			generic = "*";
 		}
 		let rank = (audioFiles[key]['total']/2000)*100;
-		if (fileName.split('.')[1] == 'mid') {
+		if (audioFiles[key]['src'].length == 0) {
+			console.log(1)
+			temp += `
+				<div class="audio-chart-row">
+					<div class="audio-chart-label">${fileName+generic}✝ <span>[${audioFiles[key]['total']} total occurrences]</span></div>
+					<div class="audio-chart-bar" style="width:${rank}%"></div>
+				</div>
+			`
+		} else if (fileName.split('.')[1] == 'mid') {
 			temp += `
 				<div class="audio-chart-row" onclick="playMIDI('${fileName}')">
 					<div class="audio-chart-label">${fileName+generic} <span>[${audioFiles[key]['total']} total occurrences]</span></div>
 					<div class="audio-chart-bar" style="width:${rank}%"></div>
 				</div>
+			`
+			creditsTemp += `
+				<a href="${audioFiles[key]['src']}" target="_blank">
+				${audioFiles[key]['filename']}
+				</a>
 			`
 		} else {
 			temp += `
@@ -205,12 +218,12 @@ function createAudioViz() {
 					<div class="audio-chart-bar" style="width:${rank}%"></div>
 				</div>
 			`
+			creditsTemp += `
+				<a href="${audioFiles[key]['src']}" target="_blank">
+				${audioFiles[key]['filename']}
+				</a>
+			`
 		}
-		creditsTemp += `
-			<a href="${audioFiles[key]['src']}" target="_blank">
-			${audioFiles[key]['filename']}
-			</a>
-		`
 	}
 	const audioChart = document.querySelector('.audio-chart');
 	audioChart.innerHTML += temp;
@@ -223,7 +236,7 @@ const babyContainer = document.querySelector('.baby-container');
 const baby = babyContainer.querySelector('.baby-content');
 const babyTotal = babyContainer.querySelector('.baby-total');
 const babyPercent = babyContainer.querySelector('.baby-percent');
-babyContainer.addEventListener('wheel', (e) => {
-	babyTotal.innerText = Math.floor(e.offsetX/640);
-	babyPercent.innerText = ((e.offsetX/(1702521*640))*100).toFixed(4);
+baby.addEventListener('scroll', (e) => {
+	babyTotal.innerText = Math.floor(baby.scrollLeft/640);
+	babyPercent.innerText = ((baby.scrollLeft/(1702521*640))*100).toFixed(4);
 })

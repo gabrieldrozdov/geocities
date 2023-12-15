@@ -474,6 +474,7 @@ img {
 	z-index: 20;
 	transform: rotate(0) translate(0%, 0%);
 	transition: transform .5s;
+	max-width: calc(100% - 40px);
 }
 .audio-player[data-active="0"] {
 	transform: rotate(-2deg) translate(150%, 150%);
@@ -519,6 +520,9 @@ img {
 @media only screen and (max-width: 800px) {
 	.audio-chart-axis-text {
 		font-size: 10px;
+	}
+	.audio-chart {
+		margin: 40px 40px 0 0;
 	}
 }
 
