@@ -562,6 +562,26 @@ img {
 	position: relative;
 	overflow: hidden;
 }
+.baby-cta {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	line-height: 1em;
+	z-index: 1;
+	color: yellow;
+	font-weight: bold;
+	font-size: 48px;
+	font-style: italic;
+	animation: baby-cta 1s infinite steps(2);
+}
+@keyframes baby-cta {
+	from {
+		display: none;
+	}
+	to {
+		display: block;
+	}
+}
 .baby-content {
 	overflow-x: scroll;
 }

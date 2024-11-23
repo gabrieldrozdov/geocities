@@ -7,6 +7,14 @@
 	<link rel="icon" type="png" href="assets/graphics/favicon.png">
 	<link rel="stylesheet" href="style.css">
 
+	<meta name="author" content="No Replica">
+	<meta name="keywords" content="Data Visualization, GeoCities, Creative Coding, Data Narrative, Internet Archive">
+	<meta name="description" content="A look at what gets lost as the Internet grows up.">
+	<meta property="og:url" content="https://geocities.noreplica.com/">
+	<meta name="og:title" property="og:title" content="GeoCities: Paradise Lost">
+	<meta property="og:description" content="A look at what gets lost as the Internet grows up.">
+	<meta property="og:image" content="/assets/graphics/opengraph.jpg">
+
 	<!-- Tone.js -->
 	<script type="text/javascript" src="https://unpkg.com/tone@latest/build/Tone.js"></script>
 	<script type="text/javascript" src="https://unpkg.com/@tonejs/ui@0.0.8/build/tonejs-ui.js"></script>
@@ -141,7 +149,7 @@
 				It’s these files I was able to download and make some sense of. Using the <a href="https://www.r-project.org/about.html" target="_blank">programming language R</a>, we can programmatically parse through the data and scour for details that show some signs of life.
 			</p>
 			<p>
-				While I can’t give you the data (for the same reason I couldn’t download the heaping mass that was the Archive Team’s torrent), what I can give you is <a href="#TODO" target="_blank">the code</a> and the process I took to get my results.
+				While I can’t give you the data (for the same reason I couldn’t download the heaping mass that was the Archive Team’s torrent), what I can give you is <a href="/assets/data/geocities-r-project.zip" target="_blank">the code</a> and the process I took to get my results.
 			</p>
 			<p>
 				What follows from hereon in are explorations that turn these datasets into visualizations. And with a mix of objectivity and subjectivity, these graphic experiments will hopefully give you a sense of what was lost as the Internet grew up while sites like GeoCities went down forever.
@@ -177,7 +185,7 @@
 
 			<h3 class="chart-title">Top 50 most commonly used audio filenames</h3>
 			<h4 class="chart-axis">Total occurrences</h4>
-			<h4 class="chart-axis">*<em>indicates randomly selected file</em><br>✝<em>indicates file is not playable at this time</em></h4>
+			<!-- <h4 class="chart-axis">*<em>indicates randomly selected file</em><br>✝<em>indicates file is not playable at this time</em></h4> -->
 			<div class="audio-chart">
 				<div class="audio-chart-axis">
 					<div class="audio-chart-axis-text">0</div>
@@ -266,7 +274,7 @@
 				Egads, I see patterns! But first, yes, there are quite a few stipulations to that chart title. The data filters out any images greater than 1000 pixels on either of their dimensions because these images are by-and-large outliers. Additionally, it would be impossible to plot the entirety of the dataset as millions of points would be needed, so this is an adequate sampling for our purposes.
 			</p>
 			<p>
-				Furthermore, I've left out the actual answer to the most popular image dimensions: 1x1 pixel. At a whopping 21,673,149 occurences, this would’ve eclipsed the rest of the data and rendered the chart incoherent. Plus, these tiny images had an entirely different purpose to the images we might think of. Instead, they were cleverly used to <a href="https://www.adlucent.com/resources/blog/the-history-and-evolution-of-pixel-tracking-in-digital-marketing/" target="_blank">track users visiting a site</a>.
+				Furthermore, I've left out the actual answer to the most popular image dimensions: 1x1 pixel. At a whopping 21,673,149 occurences, this would’ve eclipsed the rest of the data and rendered the chart incoherent. Plus, these tiny images had an entirely different purpose to the images we might think of. Instead, they were cleverly used to <a href="https://www.adlucent.com/resources/blog/the-history-and-evolution-of-pixel-tracking-in-digital-marketing/" target="_blank">track users visiting a site</a>. <em>*Edit: GitHub user HotGarbo has also pointed out that 1x1 gifs were also useful for <a href="https://news.archivesunleashed.org/geocities-and-the-spacer-gif-6a0f70e7ad5d" target="_blank">laying out pages</a>.</em>
 			</p>
 			<p>
 				All this said, the chart reveals a series of extremely satisfying patterns. First, we have strong horizontal and vertical lines tracking commonly-used round numbers. Sometimes these line up with the axes, like with 500px, but often these stray into even number territory, particularly around multiples of four. We can see this most clearly by observating the spacing between these trends, which is consistent and even.
@@ -300,6 +308,7 @@
 			</p>
 
 			<div class="baby-container">
+				<div class="baby-cta">Scroll right!!!</div>
 				<div class="baby-counter">You’ve scrolled past <span class="baby-total">0</span> / 1,702,521 babies [<span class="baby-percent">0.0000</span>%]</div>
 				<div class="baby-content">
 					<div class="baby"></div>
@@ -374,7 +383,7 @@
 	</main>
 
 	<footer class="footer">
-		<p>This project was created by <a href="https://www.gabrieldrozdov.com/" target="_blank">Gabriel Drozdov</a> for RISD’s Data Narratives course taught by <a href="https://www.reubenfb.com/" target="_blank">Reuben Fischer-Baum</a>.</p>
+		<p>Research, design, and development by <a href="https://www.gabrieldrozdov.com/" target="_blank">Gabriel Drozdov</a> / <a href="https://www.noreplica.com/" target="_blank">No Replica</a>, with advisory from <a href="https://www.reubenfb.com/" target="_blank">Reuben Fischer-Baum</a>.</p>
 		<br>
 		<p>GIFs from <a href="https://gifcities.org/" target="_blank">GifCities</a>.</p>
 	</footer>

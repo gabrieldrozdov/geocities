@@ -8,7 +8,7 @@ fetch('assets/data/random-links.json')
 	})
 
 // I'm so sorry for including these words but I'd rather they be here than on the live website!
-let filteredWords = ['sex', 'porn', 'nude', 'naked', 'babe', 'girl', 'virgin', 'gay', 'penis', 'vagina', 'dick', 'cock', 'pussy', 'fuck', 'shit', 'baby', 'anal', 'model', 'woman', 'women', 'cum', 'bondage', 'blowjob', 'horny', 'bust', 'nut', "masturbate"];
+let filteredWords = ['sex', 'porn', 'nude', 'naked', 'babe', 'girl', 'virgin', 'gay', 'penis', 'vagina', 'dick', 'cock', 'pussy', 'fuck', 'shit', 'baby', 'anal', 'model', 'woman', 'women', 'cum', 'bondage', 'blowjob', 'horny', 'bust', 'nut', "masturbate", 'man', 'men', 'underwear', 'panties', 'lingerie', 'thong', 'asian', 'ebony'];
 function createRandomLinks() {
 	let keys = Object.keys(randomLinks);
 	let temp = '';
